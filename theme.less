@@ -1,0 +1,245 @@
+/* Background and Foreground */
+@background: #292D2E;
+@foreground: #D7D7D7;
+@comment_green: #4B8B4E;
+@variable_blue: #58ABE0;
+@fucntion_blue: #4349F5;
+@orange: #DFB020;
+@brquotes: #C0C0C0;
+@flblue: #9CCAE9;
+@tag: #8AF593;
+@error: #ff5370;
+
+
+/* The code */
+
+#sidebar{
+    background: #343434;
+} /*General sidebar style*/
+
+#sidebar #working-set-list-container{
+    background: #43454A;
+} /*Working files style*/
+
+#sidebar .working-set-header,
+#sidebar .working-set-header-title{
+    background: #343434;
+} /*"Working files" header*/
+
+#sidebar #project-files-container{
+    background: #343434;
+} /*Project files - WITHOUT header*/
+
+
+/*Right toolbar - live preview, extensions*/
+#main-toolbar{
+    background: #343434;
+} /*Whole toolbar*/
+#main-toolbar .buttons{} /*Buttons group*/
+
+
+// editor
+.pane-header, .active-pane .pane-header {
+	color: @foreground;
+	background-color: #2D2D30;
+}
+
+.CodeMirror {
+
+	.CodeMirror-activeline-background {
+		outline: 1px solid #282828 !important;
+		background: #272C28;
+	}
+    
+    .CodeMirror-gutter-elt{
+        background: transparent;
+    }
+
+	.CodeMirror-linenumber,
+	.CodeMirror-scroll,
+	.CodeMirror-gutters {
+		color: @foreground;
+		background-color: #1E1E1E;
+		font-family: 'SourceCodePro-Medium',sans-serif;
+	}
+
+	.CodeMirror-linenumber {
+		color: #CDD2CE;
+	}
+
+	.CodeMirror-selected {
+		background-color: #264F78;
+	}
+
+	.cm-matchhighlight {
+		
+	}
+
+	.cm-matchingtag,
+	.CodeMirror-matchingtag {
+		background-color: #113D6F;
+		//box-shadow: 0px 0px 2px #ADC0D3;
+	}
+
+	.cm-matchingbracket,
+	.CodeMirror-matchingbracket {
+		background-color: #113D6F;
+		box-shadow: 0px 0px 3px #99B0C7;
+		color: @foreground !important;
+	}
+
+
+	.CodeMirror-cursor {
+		border-left: 1px solid @foreground;
+		z-index: 3;
+	}
+
+	.CodeMirror-activeline-background {
+		outline: 2px solid #dddddd;
+	}
+	// Languages
+	.cm-m-javascript,
+	.cm-m-css,
+	.cm-m-xml,
+	.cm-m-clike,
+	.cm-m-markdown,
+	.cm-variable,
+	.cm-variable-2,
+	.cm-variable-3 {
+		color: @foreground;
+	}
+
+	.cm-operator {
+		color: #B4B4B4;
+	}
+
+	.cm-m-javascript {
+		color: #B4B4B4;
+	}
+
+	.cm-comment {
+		color: @comment_green;
+	}
+
+	.cm-string {
+		color: #EA5B1E;
+	}
+
+	.cm-attribute {
+		color: #9CDCFE;
+	}
+
+	.cm-number {
+		color: #D9DFDD;
+	}
+
+	.cm-def {
+		color: #5ACCDA;
+	}
+
+	.cm-meta {
+		color: #9B9B9B;
+	}
+
+	.cm-keyword,
+	.cm-tag, .cm-atom {
+		color: @variable_blue;
+	}
+
+	.cm-bracket,
+	.cm-m-xml.cm-bracket,
+	.cm-m-css.cm-tag.cm-bracket {
+		color: @brquotes;
+	}
+	// markup
+	.cm-m-xml.cm-string {
+		color: #EA5B1E;
+	}
+
+	.cm-m-xml.cm-atom {
+		color: @tag;
+	}
+	// style
+	.cm-m-css.cm-builtin,
+	.cm-m-css.cm-tag,
+	.cm-m-css.cm-qualifier,
+	.cm-m-css.cm-variable-3 {
+		color: @variable_blue;
+	}
+
+	.cm-m-css.cm-property {
+		color: @orange;
+	}
+
+	.cm-m-css.cm-keyword {
+		color: @foreground;
+	}
+
+	.cm-m-css.cm-atom {
+		color: @foreground;
+	}
+
+	.cm-m-css.cm-variable-2 {
+		color: #EA5B1E;
+	}
+	// script
+	.cm-m-javascript.cm-operator {
+		color: #5BC1D9;
+	}
+
+	.cm-m-javascript.cm-def,
+	.cm-m-javascript.cm-variable,
+	.cm-m-javascript.cm-variable-2,
+	.cm-m-javascript.cm-variable-3,
+	.cm-m-javascript.cm-property {
+		color: @foreground;
+	}
+	// json properties
+	.cm-m-javascript.cm-string.cm-property {
+		color: #9A5334;
+	}
+
+	.cm-m-javascript.cm-number {
+		color: #5ED0E3;
+	}
+
+	.cm-m-javascript.cm-string-2 {
+		color: #9A5334;
+	}
+	// php
+	.cm-m-clike.cm-builtin {
+		color: @fucntion_blue;
+	}
+
+	.cm-m-clike.cm-variable-2 {
+		//color: #55DF64;
+	}
+	// markdown
+	.cm-m-markdown.cm-comment {
+		color: #CDE351;
+	}
+
+	.cm-m-markdown.cm-link {
+		color: @tag;
+	}
+
+	.cm-m-markdown.cm-header {
+		color: #808080;
+	}
+	// search highlight
+	.CodeMirror-searching {
+		color: #ddd !important;
+	}
+
+	.CodeMirror-searching.searching-last,
+	.CodeMirror-searching.searching-first {
+		border-radius: 1px;
+		background-color: #55DF64;
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+		padding: 1px 0;
+	}
+
+	.CodeMirror-searching.searching-current-match {
+		background-color: @flblue;
+	}
+}
